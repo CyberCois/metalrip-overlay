@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>metalrip</name>
+      <description lang="en">Overlay that has the required pacakges for installation of Gentoo into a Microsoft Surface device.</description>
+        <homepage>https://github.com/CyberCois/metalrip-overlay</homepage>
+        <owner type="person">
+            <name>CyberCois</name>
+            <email>github@metalrip.com</email>
+        </owner>
+        <source type="git">git://github.com/CyberCois/metalrip-overlay.git</source>
+        <feed>https://github.com/CyberCois/metalrip-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
