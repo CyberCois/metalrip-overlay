@@ -22,20 +22,20 @@ BDEPEND=""
 S="${WORKDIR}/Sparrow"
 
 src_install() {
-    insinto /opt/sparrow
+    insinto /opt/sparrow-bin
     doins -r *
-	fperms 755 /opt/sparrow/bin/Sparrow
+	fperms 755 /opt/sparrow-bin/bin/Sparrow
     # Optional: Desktop entry
     newicon "${S}/lib/Sparrow.png" sparrow
     make_desktop_entry sparrow "Sparrow Wallet" sparrow "Finance"
     # create symlink in /usr/local/bin
-	dosym -r "/opt/sparrow/bin/Sparrow" "usr/bin/sparrow"
+	dosym -r "/opt/sparrow-bin/bin/Sparrow" "usr/bin/sparrow"
 }
 
 pkg_postinst() {
 	xdg_desktop_database_update
 	xdg_icon_cache_update
-    einfo "Sparrow installed to /opt/sparrow"
+    einfo "Sparrow installed to /opt/sparrow-bin"
     einfo "Run it with: sparrow"
 }
 
